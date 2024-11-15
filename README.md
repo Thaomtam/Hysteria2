@@ -12,20 +12,33 @@ bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 ```
 bash <(curl -fsSL https://tcp.hy2.sh/)
 ```
-**Install SSL**
+**Install SSL Commo Name**
 ```
 mkdir -p /etc/ssl && openssl ecparam -genkey -name prime256v1 -out /etc/ssl/private.key && openssl req -new -x509 -days 3650 -key /etc/ssl/private.key -out /etc/ssl/cert.pem -subj "/CN=bing.com"
 ```
+**Install SSL Domain**
+'''
+apt install -y socat
+curl https://get.acme.sh | sh
+source ~/.bashrc
+acme.sh --upgrade --auto-upgrade
+acme.sh --set-default-ca --server letsencrypt
+
+acme.sh --issue -d EXAMPLE.COM --standalone --keylength ec-256
+
+acme.sh --install-cert -d EXAMPLE.COM --ecc \
+--fullchain-file /etc/ssl/private/fullchain.cer \
+--key-file /etc/ssl/private/private.key
+
+chown -R nobody:nogroup /etc/ssl/private
 ```
-chown -R nobody:nogroup /etc/ssl
+**Cấu hình máy chủ**
 ```
-**Config Server**
-```
-Đk Kênh Youtube nha mấy ní
+[Youtube](https://www.youtube.com/@kienthucandroid)
 ```
 **Cấu Hình Máy Khách**
 ```
-Đk Kênh YouTube nha mấy ní
+[Youtube](https://www.youtube.com/@kienthucandroid)
 ```
 **Nhảy Cổng**
 ```
@@ -44,3 +57,5 @@ netfilter-persistent save
 iptables -t nat -nL --line
 ```
 **Thaomtam**
++ **Link kênh** [Telegram](https://t.me/ktandroidreview)
++ **Link kênh** [Youtube](https://www.youtube.com/@kienthucandroid)
