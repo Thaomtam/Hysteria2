@@ -1,0 +1,42 @@
+{
+    "inbounds": [
+        {
+            "type": "hysteria2",
+            "listen": "::",
+            "listen_port": 8443,
+            "up_mbps": 200,
+            "down_mbps": 200,
+            "users": [
+                {
+                    "password": "khosihuythao-com"
+                }
+            ],
+            "masquerade": "https://bing.com",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ],
+                "certificate_path": "/etc/ssl/cert.pem",
+                "key_path": "/etc/ssl/private.key"
+            }
+        },
+        {
+          "type": "socks",
+          "listen": "::",
+          "listen_port": 16557,
+          "users": [
+            {
+              "Username": "admin123",
+              "Password": "admin123123"
+            }
+          ]
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
