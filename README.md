@@ -21,8 +21,26 @@ chown -R nobody:nogroup /etc/ssl
 ```
 **Config Server**
 ```
+Đk Kênh Youtube nha mấy ní
 ```
 **Cấu Hình Máy Khách**
 ```
+Đk Kênh YouTube nha mấy ní
+```
+**Nhảy Cổng**
+```
+apt install iptables-persistent
+```
+```
+iptables -t nat -A PREROUTING -p udp --dport 20000:40000 -j DNAT --to-destination :8443
+```
+```
+ip6tables -t nat -A PREROUTING -p udp --dport 20000:40000 -j DNAT --to-destination :8443
+```
+```
+netfilter-persistent save
+```
+```
+iptables -t nat -nL --line
 ```
 **Thaomtam**
