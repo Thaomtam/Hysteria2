@@ -57,5 +57,5 @@ netfilter-persistent save
 iptables -t nat -nL --line
 ```
 **Thaomtam**
-+ **Link kênh** [Telegram](https://t.me/ktandroidreview)
-+ **Link kênh** [Youtube](https://www.youtube.com/@kienthucandroid)
+**Link kênh** [Telegram](https://t.me/ktandroidreview)
+**Link kênh** [Youtube](https://www.youtube.com/@kienthucandroid)
