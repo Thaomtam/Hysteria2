@@ -1,2 +1,2 @@
-#Hysteria2 x Tcp Brutan
+# Hysteria2 x Tcp Brutan
 
